@@ -17,4 +17,10 @@ public class AppConfig {
     public Cat getCat(String name) {
         return new Cat(name);
     }
+
+    @Bean(name = "cat")
+    @Scope("prototype")
+    public Cat getCat() {
+        return new Cat("Tom");
+    }
 }
